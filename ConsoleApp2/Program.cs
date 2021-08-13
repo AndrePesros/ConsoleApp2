@@ -9,7 +9,7 @@ namespace ConsoleApp2
             Random jogada = new Random();
 
             int Cara = 1, Coroa = 2;
-            int Joga=1, Placa=2, Fim=3;
+            int opcao=0;
 
             Console.WriteLine("*-------------------------*");
             Console.WriteLine("*  Jogo de cara ou coroa  *");
@@ -21,7 +21,7 @@ namespace ConsoleApp2
 
             
 
-            if (Joga != 1)
+            if (opcao != 1)
             {
                 Console.WriteLine("Jogar < 1 >");
 
@@ -58,7 +58,7 @@ namespace ConsoleApp2
             int cara = Cara++;
             int coroa = Coroa++;
 
-                if (Placa != 2)
+                if (opcao != 2)
                 {
                     Console.WriteLine("Placar < 2 >");
                     Console.WriteLine("*-------------------------*");
@@ -69,18 +69,18 @@ namespace ConsoleApp2
                     Console.WriteLine("*                         *");
                     Console.WriteLine("*-------------------------*");
                 }
-                if (Fim != 3)
+                if (opcao != 3)
                 {
                     Console.WriteLine("Fim < 3 >");
                 }
 
 
                 Console.WriteLine("Digite a opçao que deseja executar:");
-                int Menu = int.Parse(Console.ReadLine());
+                opcao = int.Parse(Console.ReadLine());
 
-            Menu = Joga != 1 || Placa != 2 || Fim != 3;
+            
 
-            Console.ReadKey(Fim != 3);
+            Console.ReadKey(opcao != 3);
             
         }
     }
